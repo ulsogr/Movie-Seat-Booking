@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #242333;
+
+  height: 100vh;
+  font-family: "open sans", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.container {
+  display: grid;
+  justify-self: center;
+  text-align: center;
+  background-color: #35353b0e;
+  height: max-content;
+  padding: 2.2rem 1rem;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.225);
+}
+
+.movie-container {
+  margin: 25px 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14;
+  margin-left: 10px;
+  padding: 5px 17px;
+  appearance: none;
+  outline: none;
+}
+.movie-container option {
+  appearance: none;
+}
+
+.seats-container {
+  perspective: 1000px;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+}
+
+.seats-container .screen {
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.seat {
+  text-align: center;
+  background-color: #444451;
+  height: 14px;
+  width: 15px;
+  margin: 3px;
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.seat.selected {
+  background-color: #6feaf6;
+}
+.seat.occupied {
+  background-color: #fff;
+}
+
+.seat:nth-of-type(3) {
+  margin-right: 18px;
+}
+.seat:nth-of-type(8) {
+  margin-right: 18px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.showcase .seat:hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  gap: 2rem;
+  margin-bottom: 10px;
+}
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background-color: #fff;
+  height: 70px;
+  width: 85%;
+  display: inline-block;
+  margin: 15px 0px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.5);
+}
+
+.text {
+  margin: 15px 0px;
+  font-size: 15px;
+}
+.text span {
+  color: #6feaf6;
+  font-weight: 500;
+}
